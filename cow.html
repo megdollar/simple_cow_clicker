@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cow Clicker</title>
+    <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+      height: 400px;
+    }
+    #cow-count {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    </style>
+</head>
+<body>
+      <main id="cow">
+        <img id="cow-img" src="https://upload.wikimedia.org/wikipedia/commons/2/21/Cow_cartoon_04.svg" alt="cute cow">
+        <div id="cow-count">Clicks: 0</div>
+      </main>
+
+    <script>
+    //define a count variable
+    var clickCount = 0;
+    //when this function is called the clickCount var is increased by one and the cow-count div will display the updated clickCount
+    function cowClickCount() {
+      clickCount+=1;
+      document.getElementById('cow-count').innerHTML = "Clicks: " + clickCount;
+    }
+    //when the cow-img is clicked the cowClickCount function is called
+    document.getElementById('cow-img').onclick = cowClickCount;
+
+
+    </script>
+
+</body>
+</html>
